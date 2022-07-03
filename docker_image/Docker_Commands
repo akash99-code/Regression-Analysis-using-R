@@ -1,0 +1,23 @@
+	## To build Docker Image
+	docker build -t ad-shiny-app .
+	# To See Docker Images Built
+	docker Image ls
+	# To Run a Docker Image instance - Container
+	docker run --rm -p 3838:3838 ad-shiny-app
+	# Display the List of Containers
+	docker ps
+	# Display Docker Container Ports
+	docker port <containerId>
+	# Access the Shiny App
+	http://127.0.0.1:3838/
+	# Specific App1
+	http://127.0.0.1:3838/ShinyAppAds/
+	#
+	# Colors
+	https://www.stat.ubc.ca/~jenny/STAT545A/block14_colors.html
+	docker run --rm -p 3838:3838 -v E:/Radhesyam/RProjects/MDSC206/Docker:/srv/shiny-server/ -v E:/Radhesyam/RProjects/MDSC206/Docker/ShinyLogs:/var/log/shiny-server/ ad-shiny-app
+
+
+	docker run --rm -p 3838:3838 -v /home/msc1/Desktop/R_lab/Learning_R_programming/PROJECTS/docker-Image:/srv/shiny-server/ -v /home/msc1/Desktop/R_lab/Learning_R_programming/PROJECTS/docker-Image/ShinyLogs:/var/log/shiny-server/ boston-app
+
+docker run --rm -p 3838:3838 -v /home/msc1/Desktop/docker_image:/srv/shiny-server/ -v /home/msc1/Desktop/docker_image/ShinyLogs:/var/log/shiny-server/ boston-app
